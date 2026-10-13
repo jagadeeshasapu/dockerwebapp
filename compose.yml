@@ -2,20 +2,20 @@ version: "3.9"
 
 services:
   devopsdb:
-    image: shaikmustafa/deepika:db
+    image: jagadeeshasapu/facebook:db
     ports:
       - "3306:3306"
     deploy:
-      replicas: 1
+      replicas: 2
     networks:
       - mynetwork
 
   application:
-    image: shaikmustafa/deepika:app
+    image: jagadeeshasapu/facebook:app
     ports:
       - "1111:8080"
     deploy:
-      replicas: 3
+      replicas: 2
     depends_on:
       - devopsdb
     networks:
