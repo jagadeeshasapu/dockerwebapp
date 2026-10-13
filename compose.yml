@@ -11,7 +11,7 @@ services:
       - mynetwork
 
   application:
-    image: jagadeeshasapu/facebook:app
+    image: jagadeeshasapu/facebook:java
     ports:
       - "1111:8080"
     deploy:
